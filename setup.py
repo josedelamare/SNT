@@ -1,1 +1,1 @@
-pip install nbautoeval
+pip install -e nbautoeval
