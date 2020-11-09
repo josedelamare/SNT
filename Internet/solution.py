@@ -22,7 +22,7 @@ def est_superieur(debit1, debit2):
     
 def duree(quantite, debit):
     temps = quantite/debit    
-    return temps
+    return f"Il faut {temps} secondes"
 
 ########## step 2
 # You need to provide datasets
@@ -69,3 +69,19 @@ exo_duree = ExerciseFunction(
     inputs_duree,
     result_renderer=PPrintRenderer(width=20),
 )
+
+def exo_calcul(jours, duree, debit):
+    """test de la partie 1"""
+    assert jours == 23, "le nombre de jours n'est pas correct : il faut 10 jours pour le chargement, 10 pour le déchargement et 3 pour le transit. Ca fait combien au total ?"        
+    assert duree == 1987200, "le nombre de secondes n'est pas bon.\n Indice : dans 1 journée, il y a 24 * 3600 secondes. Reprenez la cellule permettant de calculer la durée"
+    assert round(debit, 3) == 5.032, "le débit n'est pas bon.\n Indice : Le débit se calcule en divisant la quantité de donnée (quel est le nom de la variable ?) par un temps (quel est le nom de la donnée ?)"
+    
+    print("Bravo !\n Tous les tests ont réussi.\n Tu as super bien travaillé pour l'instant !")
+    
+def exo_adsl_fibre(debit_ADSL, debit_fibre):
+    """test de la partie 2"""
+    assert debit_ADSL == 1.875e-3, "le débit ADSL n'est pas bon.\n Indice : un débit de 8 Mbits/s correspond à 1 Go/s"
+    assert debit_fibre != 1.25e-3, "le débit ADSL n'est pas bon.\n Indice : un débit de 8 Gbits/s correspond à 1 Go/s"
+    
+    print("Bravo !\n Tous les tests ont réussi.\n Tu as une nouvelle fois bien travaillé ! \n Attention, ça devient plus difficile ;)")
+    
