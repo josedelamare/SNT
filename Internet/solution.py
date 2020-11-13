@@ -81,7 +81,7 @@ def exo_calcul(jours, duree, debit):
 def exo_adsl_fibre(debit_ADSL, debit_fibre):
     """test de la partie 2"""
     assert debit_ADSL == 1.875e-3, "le débit ADSL n'est pas bon.\n Indice : un débit de 8 Mbits/s correspond à 1 Go/s"
-    assert debit_fibre != 1.25e-3, "le débit ADSL n'est pas bon.\n Indice : un débit de 8 Gbits/s correspond à 1 Go/s"
+    assert debit_fibre == 1.25e-1, "le débit ADSL n'est pas bon.\n Indice : un débit de 8 Gbits/s correspond à 1 Go/s"
     
     print("Bravo !\n Tous les tests ont réussi.\n Tu as une nouvelle fois bien travaillé ! \n Attention, ça devient plus difficile ;)")
     
